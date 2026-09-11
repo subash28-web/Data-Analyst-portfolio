@@ -220,6 +220,46 @@ section > h2 {
     transform: translateY(-4px);
 }
 
+/* Skills Cards */
+
+.skill-card {
+    background: #1e293b;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #334155;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+    color: #f8fafc;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+.skill-card p {
+    color: #cbd5e1;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
 
 /* =========================
    PROJECTS
@@ -270,7 +310,29 @@ section > h2 {
 }
 
 .project-btn {
-    padding: 9px 18px;
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: #38bdf8;
+
+    color: #0f172a;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #0ea5e9;
+
+    color: white;
+
+    transform: translateY(-2px);
 }
 
 
@@ -288,7 +350,13 @@ section > h2 {
     color: #f8fafc;
 }
 
+.education-year {
+    color: #cbd5e1;
+}
 
+.education-year strong {
+    color: #38bdf8;
+}
 /* =========================
    CERTIFICATIONS
 ========================= */
@@ -302,6 +370,14 @@ section > h2 {
     padding: 15px 25px;
 }
 
+#certifications .skill-card h3 {
+    color: #fcfafa;
+}
+
+#certifications .skill-card p {
+    color: #cbd5e1;
+    font-weight: 500;
+}
 
 /* =========================
    CONTACT
@@ -344,7 +420,29 @@ footer {
     color: #94a3b8;
 }
 
+footer {
+    text-align: center;
 
+    padding: 25px 20px;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    border-top: 1px solid #334155;
+}
+
+footer p {
+    margin: 8px 0;
+
+    font-size: 14px;
+}
+
+footer p:first-child {
+    color: #38bdf8;
+
+    font-weight: 600;
+}
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
@@ -363,7 +461,9 @@ footer {
     }
 
     .home {
+        flex-direction: column;
         min-height: 80vh;
+        text-align: center;
     }
 
     .home h1 {
@@ -378,8 +478,23 @@ footer {
         font-size: 16px;
     }
 
-    .projects-container {
+    .profile-container {
+        margin-top: 30px;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .projects-container,
+    .skills-container {
         grid-template-columns: 1fr;
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 5px;
     }
 
     section {
@@ -389,4 +504,166 @@ footer {
     section > h2 {
         font-size: 30px;
     }
+
+}
+
+
+/* Contact Links */
+
+#contact a {
+    color: #f2f3f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    color: #f8f8f8;
+    text-decoration: underline;
+}
+
+#contact p {
+    margin: 15px 0;
+    font-size: 17px;
+}
+
+#contact strong {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   CHATBOT
+========================= */
+
+.chatbot {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    font-size: 26px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.chatbot-box {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+
+    width: 350px;
+    height: 450px;
+
+    background: #0f172a;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-weight: 600;
+}
+
+#chatbot-close {
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    height: 330px;
+
+    padding: 15px;
+
+    overflow-y: auto;
+}
+
+.bot-message,
+.user-message {
+    padding: 10px 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    max-width: 85%;
+
+    line-height: 1.4;
+}
+
+.bot-message {
+    background: #1e293b;
+    color: #cbd5e1;
+}
+
+.user-message {
+    background: #38bdf8;
+    color: #0f172a;
+
+    margin-left: auto;
+}
+
+.chatbot-input {
+    display: flex;
+
+    padding: 10px;
+
+    border-top: 1px solid #334155;
+}
+
+#chatbot-input {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 6px 0 0 6px;
+}
+
+#chatbot-send {
+    padding: 10px 15px;
+
+    border: none;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 0 6px 6px 0;
 }
