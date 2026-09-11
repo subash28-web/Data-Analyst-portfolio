@@ -470,14 +470,6 @@ footer p:first-child {
         font-size: 40px;
     }
 
-    .home h2 {
-        font-size: 25px;
-    }
-
-    .home-content > p {
-        font-size: 16px;
-    }
-
     .profile-container {
         margin-top: 30px;
     }
@@ -485,6 +477,14 @@ footer p:first-child {
     .profile-photo {
         width: 220px;
         height: 220px;
+    }
+
+    .home h2 {
+        font-size: 25px;
+    }
+
+    .home-content > p {
+        font-size: 16px;
     }
 
     .projects-container,
